@@ -107,6 +107,7 @@ rtm_string appPreProcessStyleSheet(const rtm_string& _in)
 	switch (g_style)
 	{
 		case AppStyle::RTM: style = loadFile(":/rqt/resources/rtm.qss");
+		                    break;
 		default:
 			RTM_ERROR("Invalid style");
 	};
