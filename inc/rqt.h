@@ -6,7 +6,7 @@
 #ifndef RTM_RQT_H
 #define RTM_RQT_H
 
-struct rtmLibInterface;
+typedef struct _rtmLibInterface rtmLibInterface;
 
 namespace rqt {
 
