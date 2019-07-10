@@ -5,8 +5,7 @@ os:
 
 environment:
   matrix:
-    - TOOLSET: vs2015
-#  - TOOLSET: vs2017
+    - TOOLSET: vs2017
 
 configuration:
     - Debug
@@ -16,7 +15,7 @@ configuration:
 install:
     - set QTDIR_VS2017_x64=C:\Qt\5.12.2\msvc2017_64
     - set QTDIR_VS2017_x86=C:\Qt\5.12.2\msvc2017 
-    - set PATH=C:\projects\luaforwindows\files;%QTDIR_VS2015_x64%\bin;%PATH%
+    - set PATH=C:\projects\luaforwindows\files;%QTDIR_VS2017_x64%\bin;%PATH%
     - git clone --depth 1 https://github.com/milostosic/build   ..\build
     - git clone --depth 1 https://github.com/milostosic/rbase   ..\rbase
     - git clone --depth 1 https://github.com/milostosic/rdebug  ..\rdebug
