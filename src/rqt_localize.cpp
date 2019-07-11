@@ -13,7 +13,6 @@ RQtLocalize::RQtLocalize(QObject* _parent, const char* _translationFilePrefix)
 	m_actionGroup->setExclusive(true);
 	connect(m_actionGroup, SIGNAL(triggered(QAction*)) , this, SLOT(languageActionTriggered(QAction*)));
 
-	qWarning() << qApp->applicationDirPath() + "/translation";
 	m_filePath = qApp->applicationDirPath() + "/translation";
 	m_filePrefix = _translationFilePrefix;
 }
