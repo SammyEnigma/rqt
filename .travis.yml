@@ -24,10 +24,10 @@ before_install:
 
 install:
     - if [ "$TRAVIS_OS_NAME" == "linux" ]; then sudo apt-get install -qq qt513base; source /opt/qt513/bin/qt513-env.sh; fi
-    - if [ "$TRAVIS_OS_NAME" == "linux" ]; then sudo apt-get -qq update
+    - if [ "$TRAVIS_OS_NAME" == "linux" ]; then sudo apt-get -qq update; fi
     - if [ "$TRAVIS_OS_NAME" == "linux" ]; then export QTDIR_GMAKE_x86=/opt/qt513; fi
     - if [ "$TRAVIS_OS_NAME" == "linux" ]; then export QTDIR_GMAKE_x64=/opt/qt513; fi
-    - if [ "$TRAVIS_OS_NAME" == "linux" ]; then export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/qt513/lib/pkgconfig; fi
+    - if [ "$TRAVIS_OS_NAME" == "linux" ]; then export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/qt513:/lib/pkgconfig; fi
     - if [ "$TRAVIS_OS_NAME" == "linux" ]; then sudo apt-get install luarocks; fi
     - if [ "$TRAVIS_OS_NAME" == "linux" ]; then sudo luarocks install luafilesystem; fi
 
