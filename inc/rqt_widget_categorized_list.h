@@ -23,7 +23,7 @@ class RQtWidgetCategorizedList : public QWidget
 		QVector<ListCategory*>	m_categories;
 
 	public:
-		RQtWidgetCategorizedList(QWidget* _parent = 0, Qt::WindowFlags _flags = 0);
+		RQtWidgetCategorizedList(QWidget* _parent = 0, Qt::WindowFlags _flags = (Qt::WindowFlags)0);
 		virtual ~RQtWidgetCategorizedList();
 	
 		int addCategory(const QString& _category);

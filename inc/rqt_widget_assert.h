@@ -20,7 +20,7 @@ class RQtWidgetAssert : public QDialog
 	int				m_result;
 
 public:
-	RQtWidgetAssert(QWidget* _parent = 0, Qt::WindowFlags _flags = 0);
+	RQtWidgetAssert(QWidget* _parent = 0, Qt::WindowFlags _flags = (Qt::WindowFlags)0);
 	virtual ~RQtWidgetAssert();
 
 	void setFileLineMsgTid(const char* _file, int _line, const char* _msg, uint64_t _tid);
